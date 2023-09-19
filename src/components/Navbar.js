@@ -13,7 +13,7 @@ import {
 	AiOutlineUser,
 } from "react-icons/ai";
 
-import { CgFileDocument } from "react-icons/cg";
+// import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
 	const [expand, updateExpanded] = useState(false);
@@ -54,7 +54,7 @@ function NavBar() {
 					<Nav className="ms-auto" defaultActiveKey="#home">
 						<Nav.Item>
 							<Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-								<AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+								<AiOutlineHome style={{ marginBottom: "2px" }} /> A propos
 							</Nav.Link>
 						</Nav.Item>
 
@@ -81,7 +81,7 @@ function NavBar() {
 							</Nav.Link>
 						</Nav.Item>
 
-						<Nav.Item>
+						{/* <Nav.Item>
 							<Nav.Link
 								as={Link}
 								to="/cv"
@@ -89,7 +89,7 @@ function NavBar() {
 							>
 								<CgFileDocument style={{ marginBottom: "2px" }} /> CV
 							</Nav.Link>
-						</Nav.Item>
+						</Nav.Item> */}
 
 						<Nav.Item className="fork-btn">
 							<Button

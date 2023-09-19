@@ -33,10 +33,6 @@ function Home() {
 								<Type />
 							</div>
 						</Col>
-
-						{/* <Col md={5} className="home-image">
-							<img src={homeLogo} alt="home pic" className="img-fluid" />
-						</Col> */}
 					</Row>
 				</Container>
 			</Container>
