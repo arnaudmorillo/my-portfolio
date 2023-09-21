@@ -1,8 +1,8 @@
-import kasa from "../../Assets/Projects/Kasa.png";
-import grimmoire from "../../Assets/Projects/mon-vieux-grimmoire.png";
-import portfolio from "../../Assets/Projects/portfolio.png";
-import architecte from "../../Assets/Projects/achitecte.png";
-import booki from "../../Assets/Projects/booki.png";
+import kasa from "../../Assets/Projects/Kasa.webp";
+import grimmoire from "../../Assets/Projects/mon-vieux-grimmoire.webp";
+import portfolio from "../../Assets/Projects/portfolio.webp";
+import architecte from "../../Assets/Projects/achitecte.webp";
+import booki from "../../Assets/Projects/booki.webp";
 
 const projectData = [
 	{
