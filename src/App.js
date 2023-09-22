@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
-import Footer from "./components/Footer";
 import {
 	HashRouter as Router,
 	Route,
@@ -14,6 +13,9 @@ import {
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { lazy, Suspense } from "react";
+
+const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
 	const [load, upadateLoad] = useState(true);
@@ -38,7 +40,9 @@ function App() {
 					<Route path="/profil" element={<About />} />
 					<Route path="*" element={<Navigate to="/" />} />
 				</Routes>
-				<Footer />
+				<Suspense fallback={<div>Loading...</div>}>
+					<Footer />
+				</Suspense>
 			</div>
 		</Router>
 	);

@@ -1,8 +1,151 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 body {
 	margin: 0;
 	font-family: "Raleway", serif !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+}
+
+/* --------- */
+/* Projects */
+/* --------- */
+.project-section {
+	position: relative !important;
+	padding-top: 150px !important;
+	padding-bottom: 30px !important;
+	background-image: var(--section-background-color) !important;
+}
+
+.project-card {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+	padding-left: 25px !important;
+	padding-right: 25px !important;
+	height: auto !important;
+}
+
+.project-card-view {
+	box-shadow: 0 4px 5px 3px rgba(64, 99, 129, 0.459) !important;
+	color: white !important;
+	background-color: transparent !important;
+	opacity: 0.9 !important;
+	transition: all 0.5s ease 0s !important;
+	height: 100% !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.project-card-view:hover {
+	transform: scale(1.02) !important;
+	overflow: hidden !important;
+	box-shadow: 0 4px 4px 5px rgba(111, 168, 220, 0.561) !important;
+}
+
+.card-body {
+	flex: none !important;
+}
+
+.card-img-top {
+	padding: 20px !important;
+	opacity: 0.8 !important;
+	border-radius: 10px !important;
+}
+
+.btn-primary {
+	color: #fff !important;
+	background-color: var(--tertiary-color) !important;
+	border-color: var(--tertiary-color) !important;
+}
+
+.btn-primary:hover {
+	color: #fff !important;
+	background-color: var(--secondary-color) !important;
+	border-color: var(--secondary-color) !important;
+}
+.btn:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+.project-heading {
+	color: white !important;
+	font-size: 2.3em !important;
+	font-weight: 500 !important;
+	padding-top: 10px !important;
+}
+
+/* --------- */
+/* About */
+/* --------- */
+
+.about-section {
+	position: relative !important;
+	padding-top: 150px !important;
+	padding-bottom: 30px !important;
+	background-image: var(--section-background-color) !important;
+	color: white !important;
+}
+
+.about-img {
+	display: flex;
+	justify-content: center;
+}
+
+.about-img .img-fluid {
+	max-height: 350px;
+	object-fit: contain;
+}
+
+.techstack {
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.tech-icons {
+	font-size: 4.5em !important;
+	margin: 15px !important;
+	padding: 10px !important;
+	opacity: 0.93 !important;
+	border: 1.7px solid rgba(111, 168, 220, 0.637) !important;
+	vertical-align: middle !important;
+	text-align: center !important;
+	border-radius: 5px !important;
+	display: table !important;
+	box-shadow: 4px 5px 4px 3px rgba(64, 98, 129, 0.137) !important;
+	overflow: hidden !important;
+	transition: all 0.4s ease 0s !important;
+}
+
+@media (max-width: 767px) {
+	.tech-icons {
+		margin: 10px !important;
+	}
+}
+
+.tech-icons:hover {
+	transform: scale(1.05) !important;
+	overflow: hidden !important;
+	border: 3px solid rgba(111, 168, 220, 0.883) !important;
+	padding: 8px !important;
+}
+.tech-icon-images {
+	padding: 20px !important;
+	line-height: 1.6 !important;
+}
+
+.quote-card-view {
+	border: none !important;
+	color: white !important;
+	background-color: transparent !important;
+}
+
+.about-activity {
+	list-style: none !important;
+	text-align: left !important;
+	padding-left: 1px !important;
+}
+
+@media (max-width: 767px) {
+	.about-img {
+		padding-top: 0 !important;
+	}
 }

@@ -1,15 +1,21 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import homeLogo from "../../Assets/home-main.webp";
-import Particle from "../Particle";
-import Home2 from "./Home2";
-import Type from "./Type";
+import { lazy, Suspense } from "react";
+
+const Particle = lazy(() => import("../Particle"));
+const Home2 = lazy(() => import("./Home2"));
+const Type = lazy(() => import("./Type"));
 
 function Home() {
 	return (
 		<section>
 			<Container fluid className="home-section" id="home">
-				<Particle />
+				<Suspense fallback={<div>Loading...</div>}>
+					<Particle />
+				</Suspense>
 				<Container className="home-content">
 					<Row>
 						<Col md={5} className="home-image">
@@ -36,13 +42,17 @@ function Home() {
 								</span>
 							</h1>
 							<div style={{ padding: 50, textAlign: "left" }}>
-								<Type />
+								<Suspense fallback={<div>Loading...</div>}>
+									<Type />
+								</Suspense>
 							</div>
 						</Col>
 					</Row>
 				</Container>
 			</Container>
-			<Home2 />
+			<Suspense fallback={<div>Loading...</div>}>
+				<Home2 />
+			</Suspense>
 		</section>
 	);
 }

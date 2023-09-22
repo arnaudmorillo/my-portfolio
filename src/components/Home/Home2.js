@@ -1,5 +1,7 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 import myImg from "../../Assets/arnaud.webp";
 import Tilt from "react-parallax-tilt";
 import { AiFillGithub } from "react-icons/ai";
