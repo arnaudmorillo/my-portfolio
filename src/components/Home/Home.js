@@ -13,7 +13,13 @@ function Home() {
 				<Container className="home-content">
 					<Row>
 						<Col md={5} className="home-image">
-							<img src={homeLogo} alt="home pic" className="img-fluid" />
+							<img
+								src={homeLogo}
+								alt="home pic"
+								className="img-fluid"
+								width="320"
+								height="320"
+							/>
 						</Col>
 						<Col md={7} className="home-header">
 							<h1>

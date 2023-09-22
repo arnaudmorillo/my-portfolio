@@ -13,8 +13,6 @@ import {
 	AiOutlineUser,
 } from "react-icons/ai";
 
-// import { CgFileDocument } from "react-icons/cg";
-
 function NavBar() {
 	const [expand, updateExpanded] = useState(false);
 	const [navColour, updateNavbar] = useState(false);
@@ -37,9 +35,12 @@ function NavBar() {
 			className={navColour ? "sticky" : "navbar"}
 		>
 			<Container>
-				<Navbar.Brand href="/my-portfolio" className="d-flex">
+				<Nav.Link as={Link} to="/">
 					<img src={logo} className="img-fluid logo" alt="brand" />
-				</Navbar.Brand>
+				</Nav.Link>
+				{/* <Navbar.Brand href="/" className="d-flex">
+					<img src={logo} className="img-fluid logo" alt="brand" />
+				</Navbar.Brand> */}
 				<Navbar.Toggle
 					aria-controls="responsive-navbar-nav"
 					onClick={() => {
@@ -80,16 +81,6 @@ function NavBar() {
 								Projets
 							</Nav.Link>
 						</Nav.Item>
-
-						{/* <Nav.Item>
-							<Nav.Link
-								as={Link}
-								to="/cv"
-								onClick={() => updateExpanded(false)}
-							>
-								<CgFileDocument style={{ marginBottom: "2px" }} /> CV
-							</Nav.Link>
-						</Nav.Item> */}
 
 						<Nav.Item className="fork-btn">
 							<Button

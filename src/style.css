@@ -326,6 +326,7 @@ button:focus {
 	-o-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
 	transform: scale(-1, 1);
+	object-fit: contain;
 }
 
 @media (max-width: 767px) {
@@ -598,8 +599,14 @@ button:focus {
 	color: white !important;
 }
 
+.about-img {
+	display: flex;
+	justify-content: center;
+}
+
 .about-img .img-fluid {
 	max-height: 350px;
+	object-fit: contain;
 }
 
 .techstack {

@@ -30,7 +30,7 @@ const projectData = [
 		imgPath: architecte,
 		title: "Sophie Bluel - Architecte d'intérieur",
 		description:
-			"Développement du frontend de ce site pour un architecte d'intérieur avec javascript. Possibilité pour le propriétaire du site de se connecter et de modifier sa gallerie en ajoutant ou supprimant des projets.",
+			"Développement du frontend de ce site pour un architecte d'intérieur avec javascript. Possibilité pour le propriétaire du site de se connecter et de modifier sa galerie en ajoutant ou supprimant des projets.",
 		ghLink: "https://github.com/arnaudmorillo/OCproject3",
 	},
 	{
