@@ -25,6 +25,7 @@ function Home() {
 								className="img-fluid"
 								width="320"
 								height="320"
+								priority
 							/>
 						</Col>
 						<Col md={7} className="home-header">

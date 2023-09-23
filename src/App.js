@@ -10,12 +10,12 @@ import {
 	Routes,
 	Navigate,
 } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { lazy, Suspense } from "react";
 
 const Footer = lazy(() => import("./components/Footer"));
+const ScrollToTop = lazy(() => import("./components/ScrollToTop"));
 
 function App() {
 	const [load, upadateLoad] = useState(true);
@@ -33,7 +33,9 @@ function App() {
 			<Preloader load={load} />
 			<div className="App" id={load ? "no-scroll" : "scroll"}>
 				<Navbar />
-				<ScrollToTop />
+				<Suspense fallback={<div>Loading...</div>}>
+					<ScrollToTop />
+				</Suspense>
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/projets" element={<Projects />} />
