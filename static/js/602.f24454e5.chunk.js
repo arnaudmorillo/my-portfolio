@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[602],{8602:function(e,o,n){n.r(o);n(2791);var s=n(7704),t=n(9743),r=n(184);o.default=function(){return(0,r.jsxs)(t.Z,{style:{justifyContent:"center",paddingBottom:"10px"},children:[(0,r.jsxs)("h2",{className:"project-heading",style:{paddingBottom:"20px"},children:["Jours de ",(0,r.jsx)("strong",{className:"purple",children:"Code"})]}),(0,r.jsx)(s.Z,{username:"arnaudmorillo",blockSize:15,blockMargin:5,color:"#6fa8dc",fontSize:16})]})}}}]);
+//# sourceMappingURL=602.f24454e5.chunk.js.map
