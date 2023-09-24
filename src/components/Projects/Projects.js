@@ -1,15 +1,18 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
 import projectData from "./data";
+
+const Particle = lazy(() => import("../Particle"));
 
 function Projects() {
 	return (
 		<Container fluid className="project-section">
-			<Particle />
+			<Suspense fallback={<div>Loading...</div>}>
+				<Particle />
+			</Suspense>
 			<Container>
 				<h1 className="project-heading">
 					Mes <strong className="purple">Projets </strong>

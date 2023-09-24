@@ -1,9 +1,8 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import homeLogo from "../../Assets/home-main.webp";
-import { lazy, Suspense } from "react";
 
 const Particle = lazy(() => import("../Particle"));
 const Home2 = lazy(() => import("./Home2"));

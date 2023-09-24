@@ -1,18 +1,21 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Particle from "../Particle";
-import Github from "./Github";
-import Techstack from "./Techstack";
-import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.webp";
-import Toolstack from "./Toolstack";
+import Aboutcard from "./AboutCard";
+
+const Particle = lazy(() => import("../Particle"));
+const Techstack = lazy(() => import("./Techstack"));
+const Toolstack = lazy(() => import("./Toolstack"));
+const Github = lazy(() => import("./Github"));
 
 function About() {
 	return (
 		<Container fluid className="about-section">
-			<Particle />
+			<Suspense fallback={<div>Loading...</div>}>
+				<Particle />
+			</Suspense>
 			<Container>
 				<Row style={{ justifyContent: "center", padding: "10px" }}>
 					<Col
@@ -46,15 +49,20 @@ function About() {
 					<strong className="purple">Compétences</strong> Professionnelles
 				</h2>
 
-				<Techstack />
+				<Suspense fallback={<div>Loading...</div>}>
+					<Techstack />
+				</Suspense>
 
 				<h2 className="project-heading">
 					<strong className="purple">Outils de développement</strong> que
 					j'utilise
 				</h2>
-				<Toolstack />
-
-				<Github />
+				<Suspense fallback={<div>Loading...</div>}>
+					<Toolstack />
+				</Suspense>
+				<Suspense fallback={<div>Loading...</div>}>
+					<Github />
+				</Suspense>
 			</Container>
 		</Container>
 	);
